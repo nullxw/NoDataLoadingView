@@ -24,12 +24,12 @@
     selfWebView.alpha = 0;
 
     [self.view addSubview:selfWebView];
-    [selfWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.baidu.com"]]];
+    [selfWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.163.com"]]];
 
     
     __weak typeof(selfWebView)weakWeb = selfWebView;
     [selfWebView addNodataLoadingViewWithLogoImage:[UIImage imageNamed:@"background"] refreshBlock:^{
-        [weakWeb loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.baidu.com"]]];
+        [weakWeb loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.163.com"]]];
     }];
     
     // Do any additional setup after loading the view, typically from a nib.
